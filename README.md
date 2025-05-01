@@ -53,14 +53,30 @@ Nest doesn't connect to your bank. It’s built around the idea that the act of 
 
 ---
 
-##  Tech Stack
+## ⚠️ Security Notice: Read This
 
-- **Frontend:** HTML, CSS, Vanilla JavaScript
-- **Icons & Fonts:** Font Awesome, Custom CDN fonts
-- **Charts:** [Chart.js](https://www.chartjs.org/)
-- **No backend required** (in-memory simulation)
+>  This is a **proof of concept**, not a production-ready application.
+
+This app intentionally uses `innerHTML` throughout for dynamic UI generation. That comes with known **XSS vulnerabilities** if user input isn't sanitized. If deployed in a real-world scenario:
+
+- All user inputs would be sanitized using libraries like **DOMPurify**
+- Dangerous DOM manipulations would be replaced with safer alternatives (`.textContent`, `createElement`, etc.)
+- CSP headers and sandboxing policies would be applied
+- Inputs would be validated both client-side and server-side
+- A real authentication system would protect sensitive data
+
+For now, this is designed to test UX flows and UI overlays—not production security.
 
 ---
+
+## 🔧 Tech Stack
+
+- Vanilla **JavaScript**, **HTML**, **CSS**
+- Chart rendering: **Chart.js**
+- Icons: **Font Awesome**
+- Fonts: Custom CDN
+- No backend (data is stored in memory)
+
 
 
 

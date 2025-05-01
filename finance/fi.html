@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Nest Finance Tracker</title>
+
+    <link href="https://fonts.cdnfonts.com/css/taruno-wide" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+                
+                
+                
+
+    <link rel="stylesheet" href="fi.css">
+    <script src="fi.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="Finance-date"></h1>
+
+        <div class="logo-wrapper">
+            <img src="/images/ping-removebg-preview.png" alt="Ping Logo" id="ping-logo">
+          </div>
+          
+          
+        <p id="balance-amount">$0.00</p>
+
+        <!-- Income & Expense Summary -->
+        <div class="summary-box">
+            <div class="summary-item">
+                <h3>INCOME</h3>
+                <p id="total-income">$0.00</p>
+            </div>
+            <div class="divider"></div>
+            <div class="summary-item">
+                <h3>EXPENSES</h3>
+                <p id="total-expense">$0.00</p>
+            </div>
+        </div>
+
+        <label>Description</label>
+        <input type="text" id="description" placeholder="Enter description">
+
+        <br>
+        <label>Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+
+        <br>
+        <button id="add">Add Transaction</button>
+
+        <div class="transaction-history" id="transaction-history"></div>
+
+    </div>
+
+   
+
+    <div id="historycontainer" class="transaction-history">
+        
+        <!-- Transactions will be dynamically inserted here -->
+        <label for="search">Search Transactions</label>
+        <input type="text" id="search" placeholder="Search by description...">
+        <div id="transaction-list"></div>
+        <button id="history-menu-btn" class="ellipsis-menu">
+            &#8942; <!-- Unicode for vertical ellipsis -->
+        </button>
+        <div id="history-menu" class="menu-dropdown">
+            <ul class="menu-list">
+                <li data-action="autoLoops"><i class="fa-solid fa-repeat"></i> AutoLoops</li>
+                <li data-action="aiSpendingCoach"><i class="fa-solid fa-robot"></i> AI Spending Coach</li>
+                <li data-action="fare-float"><i class="fa-solid fa-money-check-dollar"></i> Fare Float</li>
+                <li data-action="spendingCaps"><i class="fa-solid fa-triangle-exclamation"></i> Spending Caps</li>
+                <li data-action="steadyPay"><i class="fa-solid fa-envelopes-bulk"></i> SteadyPay</li>
+                <li data-action="analytics"><i class="fa-solid fa-chart-simple"></i> Analytics</li>
+                <li data-action="nestEgg"><i class="fa-solid fa-piggy-bank"></i>Nest Egg </li>
+            </ul>
+            
+            
+            
+        </div>
+
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+                <!-- Close Icon at the Top -->
+                <i id="closeOverlay" class="fa-solid fa-circle-xmark close-icon"></i>
+        
+                <h2>AutoLoops</h2>
+                <p>Bills on beat. No surprises. No stress. AutoLoops tracks your recurring payments and reminds you before they hit, so you stay in control and keep your flow smooth.</p>
+                
+                <!-- Arrow Icon at the Bottom -->
+                
+            </div>
+        </div>
+        
+        
+    
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+        
+
+</body>
+</html>
